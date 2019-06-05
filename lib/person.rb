@@ -90,14 +90,6 @@ class Person
         end
       end
 
-
-
-
-
-
-
-
-
 end # class end
 
 alex = Person.new("Alex")
