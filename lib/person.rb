@@ -2,8 +2,8 @@
 require 'pry'
 class Person
 
-    attr_accessor :bank_account, :happiness, :hygiene
-    attr_reader :name
+    attr_accessor :bank_account
+    attr_reader :name, :happiness, :hygiene
 
 
     def initialize(name, bank_account= 25, happiness = 8, hygiene = 8)
@@ -13,11 +13,11 @@ class Person
         @hygiene = hygiene
     
     end
-
-
+    
+    
     def happiness=(happiness)
         if happiness > 10
-            @happiness= 10
+            @happiness = 10
         elsif happiness < 0
             @happiness= 0
         else
@@ -90,15 +90,6 @@ class Person
         return "Hi #{friend.name}! It's #{self.name}. How are you?"
     end
 
-    def helper
-      if self.happiness > 10 
-        self.happiness = 10 
-      end
-      if friend.happiness > 10
-        friend.happines = 10
-      end
-    end
-
     def start_conversation(person, topic)
         if topic == "politics"
             person.happiness -=2
@@ -111,8 +102,7 @@ class Person
                 friend.happines = 10
             end
         
-        
-
+    
         elsif topic == "weather"
             self.happiness += 1
             person.happiness += 1
@@ -127,13 +117,7 @@ class Person
         else
             return "blah blah blah blah blah"
         end
-            
-       
-
     end #end of start conversation
-
-
-
 
 
 end #end of Person class
