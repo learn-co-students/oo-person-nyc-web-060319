@@ -4,7 +4,7 @@ require 'pry'
 class Person
 
     attr_reader :name
-    # attr_writer :happiness
+    # attr_writer :happiness (see below why this does not work)
     
 
     def initialize(name, bank_account=25, happiness=8, hygiene=8)
@@ -12,9 +12,6 @@ class Person
         @bank_account = bank_account
         @happiness = happiness
         @hygiene = hygiene
-        self.bank_account
-        self.happiness
-        self.hygiene
     end
 
     def bank_account
