@@ -91,8 +91,5 @@ class Person
     else
       "blah blah blah blah blah"
     end
-    # "blah blah #{word1} blah #{word2}"
   end
 end
-
-# Ingrid = Person.new("Ingrid", 100)
